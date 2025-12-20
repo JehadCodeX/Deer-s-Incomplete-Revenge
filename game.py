@@ -235,7 +235,7 @@ JehadCode_text = """
 ************************************************** 
 JehadCode's Final Words
 ************************************************** 
-JehadCode: This game took me 8 hours and 33 minutes to make.
+JehadCode: This game took me 8 hours and 35 minutes to make.
 It's my first time creating a game focused on story rather than gameplay.
 I hope that you've enjoyed playing the game...
 You can find more projects on my GitHub Account: https://github.com/JehadCodeX
