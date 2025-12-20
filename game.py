@@ -1,6 +1,28 @@
 import random
 import time
 
+
+def display_word_by_word(text, delay=0.25):
+    for line in text.splitlines():
+        for word in line.split():
+            print(word, end=' ', flush=True)
+            time.sleep(delay)
+        print()
+    print("\n" + "*"*50 + "\n")
+
+game_tittle = """
+Deer's Incomplete Revenge.
+
+a game made by: JehadCode.
+
+© 2025 JehadCode. All rights reserved.
+
+"""
+
+display_word_by_word(game_tittle, 0.5)
+
+
+time.sleep(1.5)
 skip = input("Press X to skip cutscenes and start the game directly: ").lower()
 play_cutscenes = skip != "x"
 
@@ -69,7 +91,7 @@ cutscenes = {
         "Deeruz: Your last breath is soon...."
     ],
     9: [
-        "DEMON'S SCREAM",
+        "*DEMON'S SCREAM*",
         "Deeruz: I hate humans!...... why I'm betting unfair creatures!!!",
         "Deeruz: You've won the battle not the war!",
         "Deeruz is suffering",
@@ -77,7 +99,7 @@ cutscenes = {
     ],
     10: [
         "*DEMON'S VICTORY LAUGH*",
-        "YOU 'HUMANS' COULD NEVER BEAT YOUR COACH!",
+        "Deeruz: YOU 'HUMANS' COULD NEVER BEAT YOUR COACH!",
         "Deeruz: I hope that you've learned something, humans are too weak!!!"
     ]
 }
@@ -235,7 +257,7 @@ JehadCode_text = """
 ************************************************** 
 JehadCode's Final Words
 ************************************************** 
-JehadCode: This game took me 8 hours and 35 minutes to make.
+JehadCode: This game took me 8 hours and 54 minutes to make.
 It's my first time creating a game focused on story rather than gameplay.
 I hope that you've enjoyed playing the game...
 You can find more projects on my GitHub Account: https://github.com/JehadCodeX
@@ -288,16 +310,7 @@ Powered By:
 **************************************************
 """
 
-
-def display_word_by_word(text, delay=0.25):
-    for line in text.splitlines():
-        for word in line.split():
-            print(word, end=' ', flush=True)
-            time.sleep(delay)
-        print()
-    print("\n" + "*"*50 + "\n")
-
-
 display_word_by_word(credits_text, delay=0.2)
 display_word_by_word(easter_eggs_text, delay=0.1)
 display_word_by_word(JehadCode_text, delay=0.2)
+display_word_by_word(game_tittle, delay=0.5)
