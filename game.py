@@ -133,7 +133,7 @@ while player_score < MAX_WINS and deeruz_score < MAX_WINS:
             print("\nYour turn...")
             time.sleep(1.5)
 
-            if shot_yourself == 1 and len(bullet_set) == 1:
+            if shot_yourself == 1 and len(bullet_set) == 2:
                 print("You must shoot yourself")
                 choice = "0"
             elif shot_yourself == 1:
@@ -181,12 +181,11 @@ while player_score < MAX_WINS and deeruz_score < MAX_WINS:
             print("\nDeeruz's turn...")
             time.sleep(2)
             bullet = bullet_set.pop(0)
-
-            if deeruz_selfshot == 1 and random.randint(1, 3) == 3:
-                deeruz_choice = "self"
-            elif deeruz_selfshot == 1 and len(bullet_set) == 1:
+            if deeruz_selfshot == 1 and len(bullet_set) <= 1:
                 deeruz_choice = "self"
                 print("Deeruz: I must shoot at myself")
+            elif deeruz_selfshot == 1 and random.randint(1, 3) == 3:
+                deeruz_choice = "self"
             else:
                 deeruz_choice = "you"
 
@@ -236,7 +235,7 @@ JehadCode_text = """
 ************************************************** 
 JehadCode's Final Words
 ************************************************** 
-JehadCode: This game took me 7 hours and 44 minutes to make.
+JehadCode: This game took me 8 hours and 30 minutes to make.
 It's my first time creating a game focused on story rather than gameplay.
 I hope that you've enjoyed playing the game...
 You can find more projects on my GitHub Account: https://github.com/JehadCodeX
